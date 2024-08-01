@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .link {
+        color: rgb(21, 79, 76);
+      }
+      .link:hover{
+        color:red;
+      }
+      .add {
+        background-color: #ffc400;
+        border-color: #ffc400;
+        border-style: solid;
+        border-radius: 18px;
+        margin-left: 5px;
+        font-size: 13px;
+        font-weight: bold;
+        transition: opacity 0.15s, background-color 0.15s, border-color 0.15s;
+      }
+      .add:active{
+        opacity: 0.75;
+      }
+      .add:hover{
+        background-color: rgb(234, 180, 0);
+        border-color: rgb(234, 180, 0);
+      }
+      .buy {
+        border-radius: 18px;
+        margin-left: 10px;
+        background-color: rgb(215, 115, 62);
+        border-color: rgb(215, 115, 62);
+        border-style:solid;
+        font-size: 13px;
+        font-weight: bold;
+        transition: opacity 0.15s;
+        
+      }
+      .btn{
+        height: 35px;
+        width: 120px;
+        cursor:pointer;
+      }
+      .buy:active{
+        opacity: 0.75;
+      }
+      .buy:hover{
+        background-color:rgb(218, 92, 24);
+        border-color: rgb(218, 92, 24);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.amazon.in" target="_blank" class="link">
+      Back to Amazon
+    </a>
+
+    <p
+      style="
+        font-size: x-large;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      "
+    >
+      Nike Black runnning Shoes
+    </p>
+
+    <p style="color: rgb(19, 138, 19); font-size: larger; font-weight: bold">
+      $39 - in stock.
+    </p>
+
+    <p style="font-size: large">Free delivery tomorrow.</p>
+
+    <button class="add btn">Add to Cart</button>
+
+    <button class="buy btn">Buy now</button>
+  </body>
+</html>
