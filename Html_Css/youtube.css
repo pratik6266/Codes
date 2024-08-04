@@ -1,12 +1,18 @@
-.search-bar{
-    display: block;
+body{
+    margin: 0;
 }
+
+.top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
 .video{
     margin-top: 10px;
     display: inline-block;
     vertical-align: top;
-    margin-bottom: 35px;
-    margin-left: 10px;
 }
 
     .first-hori{
@@ -14,12 +20,13 @@
     }
 
         .th{
-            width: 420px;
+            width: 100%;
             margin-bottom: 0;
         }
 
     .second-hori{
-        display: inline-block;
+        display: grid;
+        grid-template-columns: 50px 1fr;
     }
 
         .profile{
