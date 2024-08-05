@@ -17,11 +17,25 @@ body{
 
     .first-hori{
         margin-bottom: 0;
+        position: relative;
     }
 
         .th{
             width: 100%;
             margin-bottom: 0;
+        }
+
+        .ts{
+            position: absolute;
+            background-color: black;
+            color: white;
+            bottom:10px;
+            right:8px;
+            font-family:Roboto,Arial;
+            font-weight: 500;
+            padding: 8px;
+            font-size: 17px;
+            border-radius: 2px;
         }
 
     .second-hori{

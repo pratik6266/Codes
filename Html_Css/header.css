@@ -1,28 +1,134 @@
 .header{
-    height: 55px;
+    height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    background-color: white;
+    left:0;
+    right:0;
+    top:0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+    z-index: 20;
 }
 
 .left{
-    background-color: lightpink;
-    width: 150px;
+    display:flex;
+    align-items: center;
 }
+
+    .ham{
+        width: 30px;
+        height: 40px;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .yt{
+        height: 26px;
+    }
 
 .middle{
-    background-color: lightblue;
+    display:flex;
+    align-items: center;;
     flex: 1;
-    margin-left: 70px;
-    margin-right: 35px;
-    max-width: 500px;
+    max-width: 600px;
 }
 
-.search-bar{
-    display: block;
-}
+    .search-bar{
+        width: 100px;
+        display: flex;
+        flex: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: 40px;
+        font-size: 22px;
+        padding-left: 20px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(192, 192, 192);
+        border-radius: 2px;
+        box-shadow:inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .search-bar::placeholder{
+        font-family:Roboto, Arial;
+    }
+
+    .search{
+        height: 50px;
+        width: 40px;
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-left: -9px;
+        margin-top: -3px;
+        margin-bottom: -5px;
+        margin-right: -7px;
+        background-color:rgb(240, 240, 240);
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(192, 192, 192);
+        border-radius: 2px;
+        box-shadow:inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .voice{
+        width: 35px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+    .voice-button{
+        margin-left: 15px;
+        border-radius: 200px;
+        border-style: solid;
+        border-color: rgb(240, 240, 240);
+    }
 
 .right{
-    background-color: lightpink;
-    width: 200px;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}  
+
+    .upload{
+        width: 40px;
+    }
+    
+    .apps{
+        width: 40px;
+    }
+
+    .noti-div{
+        position: relative;
+    }
+    
+        .notification{
+            width: 40px;     
+        }
+
+        .noti-count{
+            position: absolute;
+            border: solid;
+            border-color:red;
+            border-width: 1px;
+            font-size: 15px;
+            color: white;
+            background-color: red;
+            border-radius: 100px;
+            top: -4px;
+            right:-8px;
+            padding-right: 8px;
+            padding-left: 8px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+    
+    .my{
+        width: 60px;
+    }
