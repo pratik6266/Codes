@@ -14,6 +14,11 @@
     z-index: 20;
 }
 
+.app-button .toolkit{
+    width: 105px;
+
+}
+
 .left{
     display:flex;
     align-items: center;
@@ -24,10 +29,12 @@
         height: 40px;
         margin-left: 35px;
         margin-right: 35px;
+        cursor: pointer;
     }
 
     .yt{
         height: 26px;
+        cursor: pointer;
     }
 
 .middle{
@@ -35,6 +42,8 @@
     align-items: center;;
     flex: 1;
     max-width: 600px;
+    margin-right: 20px;
+    margin-left: 40px;
 }
 
     .search-bar{
@@ -63,7 +72,7 @@
         padding-left: 18px;
         padding-right: 18px;
         margin-left: -9px;
-        margin-top: -3px;
+        margin-top: -5px;
         margin-bottom: -5px;
         margin-right: -7px;
         background-color:rgb(240, 240, 240);
@@ -72,19 +81,54 @@
         border-color: rgb(192, 192, 192);
         border-radius: 2px;
         box-shadow:inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+    }
+
+    .search-button,
+    .voice-button,
+    .app-button,
+    .upload-button,
+    .noti-div{
+        position: relative;
+        display:flex;
+        justify-content: center;
+    }
+
+    .toolkit{
+        font-family: Roboto, Arial;
+        position: absolute;
+        background-color: rgb(89, 89, 89);
+        color:white;
+        padding: 12px 12px;
+        bottom: -55px;
+        opacity: 0;
+        pointer-events: none;
+        transform: opacity 0.5s;
+    }
+
+    .search-button:hover .toolkit,
+    .voice-button:hover .toolkit,
+    .app-button:hover .toolkit,
+    .upload-button:hover .toolkit,
+    .noti-div:hover .toolkit{
+        opacity: 1;
     }
 
     .voice{
+        position: relative;
         width: 35px;
         height: 40px;
         object-fit: contain;
+        cursor: pointer;
     }
 
     .voice-button{
+        position: relative;
         margin-left: 15px;
         border-radius: 200px;
         border-style: solid;
         border-color: rgb(240, 240, 240);
+        white-space: nowrap;
     }
 
 .right{
@@ -98,14 +142,17 @@
 
     .upload{
         width: 40px;
+        cursor: pointer;
     }
     
     .apps{
         width: 40px;
+        cursor: pointer;
     }
 
     .noti-div{
         position: relative;
+        cursor: pointer;
     }
     
         .notification{
@@ -130,5 +177,6 @@
         }
     
     .my{
-        width: 60px;
+        cursor: pointer;
+        width: 45px;
     }

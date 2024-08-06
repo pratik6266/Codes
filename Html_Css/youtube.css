@@ -9,6 +9,27 @@ body{
     row-gap: 40px;
 }
 
+@media(max-width:750px)
+{
+    .top{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 751px) and (max-width:999px)
+{
+    .top{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(min-width:1200px)
+{
+    .top{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
 .video{
     margin-top: 10px;
     display: inline-block;
@@ -47,7 +68,7 @@ body{
             display: inline-block;
             vertical-align: top;
             padding-top: 15px;
-            width: 40px;
+            width: 50px;
         }
 
             .photo{
@@ -63,9 +84,10 @@ body{
         }
 
             .text{
-                font-size: 14px;
+                margin-top:12px;
+                font-size: 20px;
                 font-weight: 450;
-                line-height: 20px;
+                line-height: 25px;
                 font-family: Roboto;
                 margin-bottom: 0px;
             }
@@ -74,7 +96,7 @@ body{
                 margin-top: 15px;
                 margin-bottom: 0;
                 color: rgb(92, 92, 92);
-                font-size: 14px;
+                font-size: 16px;
                 font-family: Roboto; 
             }
             
@@ -82,6 +104,6 @@ body{
                 margin-top: 4px;
                 margin-bottom: 0;
                 color: rgb(92, 92, 92);
-                font-size: 14px;
+                font-size: 16px;
                 font-family: Roboto;
             }

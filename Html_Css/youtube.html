@@ -12,7 +12,7 @@
         <link href="sidebar.css" rel="stylesheet">
         
     </head>
-    <body style="padding-top:100px;margin:0;padding-left:135px;padding-right: 30px">
+    <body style="padding-top:100px;margin:0;padding-left:135px;padding-right: 30px;background-color:rgb(247, 247, 247);height:1600px">
 
     <div class="header">
         <div class="left">
@@ -22,15 +22,16 @@
 
         <div class="middle">
             <input class="search-bar" type="text" placeholder="Search"> 
-            <button class="search-button"><img class="search" src="icon/search.svg"></button>
-            <button class="voice-button"><img class="voice" src="icon/voice-search-icon.svg"></button>
+            <button class="search-button"><img class="search" src="icon/search.svg"><div class="toolkit">Search</div></button>
+            <button class="voice-button"><img class="voice" src="icon/voice-search-icon.svg"><div class="toolkit">Search with your voice</div></button>
         </div>
 
         <div class="right">
-            <img class="upload" src="icon/upload.svg">
-            <img class="apps" src="icon/youtube-apps.svg">
+            <div class="upload-button"><img class="upload" src="icon/upload.svg"><div class="toolkit">Create</div></div>
+            <div class="app-button"> <img class="apps" src="icon/youtube-apps.svg"><div class="toolkit">YouTube apps</div></div>
             <div class="noti-div">
                 <img class="notification" src="icon/notifications.svg">
+                <div class="toolkit">notifications</div>
                 <div class="noti-count">3</div>
             </div>
             <img class="my" src="icon/my-channel.jpeg">
@@ -38,7 +39,12 @@
     </div> 
 
     <div class="sidebar">
-        sidebar
+        <div class="sidebar-icon"><img src="icon/home.svg"><div class="home">Home</div></div>
+        <div class="sidebar-icon"><img src="icon/explore.svg"><div class="explore">Explroe</div></div>
+        <div class="sidebar-icon"><img src="icon/subscriptions.svg"><div class="subscription">Subscriptions</div></div>
+        <div class="sidebar-icon"><img src="icon/originals.svg"><div class="originals">Originals</div></div>
+        <div class="sidebar-icon"><img src="icon/youtube-music.svg"><div class="yt-music">Youtube Music</div></div>
+        <div class="sidebar-icon"><img src="icon/library.svg"><div class="library">Library</div></div>
         <img src="" >
     </div>
 
