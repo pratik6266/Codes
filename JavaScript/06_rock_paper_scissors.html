@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title></title>-->
+        
+    </head>
+    <body>
+        <p style="font-size: 20px">Rocks Paper Scissors</p>
+        <button onclick="
+            let y='';
+            let x = Math.floor((Math.random() * 3) + 1);
+            if(x <= 1)
+            {
+                y='rocks';
+            }
+            else if(x <= 2)
+            {
+                y='paper';
+            }
+            else if(x <= 3)
+            {
+                y='scissors';
+            }
+            let res = ' ';
+            if(y==='rocks')
+                res = 'Tie';
+            else if(y==='paper')
+                res = 'You lose';
+            else if(y==='scissors')
+                res = 'You win';
+            alert(`You picked rocks. Computer picked ${y}. ${res}`);
+        ">Rocks</button>
+
+        <button onclick="
+            let y='';
+            let x = Math.floor((Math.random() * 3) + 1);
+            if(x <= 1)
+            {
+                y='rocks';
+            }
+            else if(x <= 2)
+            {
+                y='paper';
+            }
+            else if(x <= 3)
+            {
+                y='scissors';
+            }
+            let res = ' ';
+            if(y==='rocks')
+                res = 'You win';
+            else if(y==='paper')
+                res = 'Tie';
+            else if(y==='scissors')
+                res = 'You lose';
+            alert(`You picked paper. Computer picked ${y}. ${res}`);
+        ">Paper</button>
+
+        <button onclick = "
+            let y='';
+            let x = Math.floor((Math.random() * 3) + 1);
+            if(x <= 1)
+            {
+                y='rocks';
+            }
+            else if(x <= 2)
+            {
+                y='paper';
+            }
+            else if(x <= 3)
+            {
+                y='scissors';
+            }
+            let res = ' ';
+            if(y==='rocks')
+                res = 'You lose';
+            else if(y==='paper')
+                res = 'You win';
+            else if(y==='scissors')
+                res = 'Tie';
+            alert(`You picked Scissors. Computer picked ${y}. ${res}`);
+        ">Scissors</button>
+
+    </body>
+</html>
