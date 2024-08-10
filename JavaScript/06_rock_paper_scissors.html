@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--<title></title>-->
+        <title>Rock Paper and Scissors</title>
         
     </head>
     <body>
         <p style="font-size: 20px">Rocks Paper Scissors</p>
         <button onclick="
-            let y='';
-            let x = Math.floor((Math.random() * 3) + 1);
-            if(x <= 1)
-            {
-                y='rocks';
-            }
-            else if(x <= 2)
-            {
-                y='paper';
-            }
-            else if(x <= 3)
-            {
-                y='scissors';
-            }
-            let res = ' ';
-            if(y==='rocks')
-                res = 'Tie';
-            else if(y==='paper')
-                res = 'You lose';
-            else if(y==='scissors')
-                res = 'You win';
-            alert(`You picked rocks. Computer picked ${y}. ${res}`);
+            d('rocks');
         ">Rocks</button>
 
         <button onclick="
-            let y='';
-            let x = Math.floor((Math.random() * 3) + 1);
-            if(x <= 1)
-            {
-                y='rocks';
-            }
-            else if(x <= 2)
-            {
-                y='paper';
-            }
-            else if(x <= 3)
-            {
-                y='scissors';
-            }
-            let res = ' ';
-            if(y==='rocks')
-                res = 'You win';
-            else if(y==='paper')
-                res = 'Tie';
-            else if(y==='scissors')
-                res = 'You lose';
-            alert(`You picked paper. Computer picked ${y}. ${res}`);
+            d('paper');
         ">Paper</button>
 
         <button onclick = "
+            d('scissors');
+        ">Scissors</button>
+
+        <button onclick = "
+            score.win = 0;
+            score.lose = 0;
+            score.tie = 0;
+            alert('Set value to default');
+        ">reset</button>
+
+    <script>
+
+        let score = {
+            win:0,
+            lose:0,
+            tie:0
+        };
+
+        function d(b)
+        {
+            if(b === 'scissors')
+            {
+                let y = def();
+                    let res = ' ';
+                if(y==='rocks'){
+                    res = 'You lose';
+                    score.lose++;}
+                else if(y==='paper'){
+                    res = 'You win';
+                    score.win++;}
+                else if(y==='scissors'){
+                    res = 'Tie';
+                    score.tie++;}
+                alert(`You picked ${b}. Computer picked ${y}. ${res}\nWin:${score.win}, Lose:${score.lose}, Tie:${score.tie}`);
+            }
+            else if(b === 'paper')
+            {
+                let y = def();
+                let res = '';
+                if(y==='rocks'){
+                    res = 'You win';
+                    score.win++;}
+                else if(y==='paper'){
+                    res = 'Tie';
+                    score.tie++;}
+                else if(y==='scissors'){
+                    res = 'You lose';
+                    score.lose++;}
+                alert(`You picked ${b}. Computer picked ${y}. ${res}\nWin:${score.win}, Lose:${score.lose}, Tie:${score.tie}`);
+            }
+            else if(b === 'rocks')
+            {
+                let y = def();
+                let res = ' ';
+                if(y==='rocks'){
+                    res = 'Tie';
+                    score.tie++;}
+                else if(y==='paper'){
+                    res = 'You lose';
+                    score.lose++;}
+                else if(y==='scissors'){
+                    res = 'You win';
+                    score.win++;}
+                alert(`You picked ${b}. Computer picked ${y}. ${res}\nWin:${score.win}, Lose:${score.lose}, Tie:${score.tie}`);
+            }
+        }
+        
+        function def()
+        {
             let y='';
             let x = Math.floor((Math.random() * 3) + 1);
             if(x <= 1)
@@ -71,15 +98,8 @@
             {
                 y='scissors';
             }
-            let res = ' ';
-            if(y==='rocks')
-                res = 'You lose';
-            else if(y==='paper')
-                res = 'You win';
-            else if(y==='scissors')
-                res = 'Tie';
-            alert(`You picked Scissors. Computer picked ${y}. ${res}`);
-        ">Scissors</button>
-
+            return y;
+        }
+    </script>
     </body>
 </html>

@@ -6,35 +6,41 @@
     </head>
     <body>
         <p>Calculator</p>
+        <p class="display"> </p>
         <p>
-            <button onclick="calculation += 1;console.log(calculation)">1</button>
-            <button onclick="calculation += 2;console.log(calculation)">2</button>        
-            <button onclick="calculation += 3;console.log(calculation)">3</button>
-            <button onclick="calculation += '+';console.log(calculation)">+</button>
+            <button onclick="calculation += 1;disp();">1</button>
+            <button onclick="calculation += 2;disp();">2</button>        
+            <button onclick="calculation += 3;disp();">3</button>
+            <button onclick="calculation += ' + ';disp();">+</button>
         </p>
         <p>
-            <button onclick="calculation += 4;console.log(calculation)">4</button>
-            <button onclick="calculation += 5;console.log(calculation)">5</button>        
-            <button onclick="calculation += 6;console.log(calculation)">6</button>
-            <button onclick="calculation += '-';console.log(calculation)">-</button>
+            <button onclick="calculation += 4;disp();">4</button>
+            <button onclick="calculation += 5;disp();">5</button>        
+            <button onclick="calculation += 6;disp();">6</button>
+            <button onclick="calculation += ' - ';disp();">-</button>
         </p>
         <p>
-            <button onclick="calculation += 7;console.log(calculation)">7</button>
-            <button onclick="calculation += 8;console.log(calculation)">8</button>        
-            <button onclick="calculation += 9;console.log(calculation)">9</button>
-            <button onclick="calculation += '*';console.log(calculation)">*</button>
+            <button onclick="calculation += 7;disp();">7</button>
+            <button onclick="calculation += 8;disp();">8</button>        
+            <button onclick="calculation += 9;disp();">9</button>
+            <button onclick="calculation += ' * ';disp();">*</button>
         </p>
         <p>
-            <button onclick="calculation += 0;console.log(calculation)">0</button>
-            <button onclick="calculation += '.';console.log(calculation)">.</button>
-            <button onclick="calculation = eval(calculation);console.log(calculation)">=</button>
-            <button onclick="calculation += '/';console.log(calculation)">/</button>
+            <button onclick="calculation += 0;disp();">0</button>
+            <button onclick="calculation += '.';disp();">.</button>
+            <button onclick="calculation = eval(calculation);disp();">=</button>
+            <button onclick="calculation += ' / ';disp();">/</button>
         </p>
         <p>
             <button onclick="calculation = '';console.log('Clear.')">Clear</button>
         </p>
         <script>
             let calculation = '';
+            function disp()
+            {
+                
+                document.querySelector('.display').innerHTML = (calculation)
+            }
         </script>
     </body>
 </html>

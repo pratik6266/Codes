@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title></title>-->
+        
+    </head>
+    <body>
+        <input placeholder="Enter the name" class="put" on="
+        if(event.key === 'Enter')
+        {
+            disp();
+        }
+        ">
+        <button  onclick = disp();>Submit</button>
+        <p class="display"></p>
+        <script>
+            function disp()
+            {
+                let a = document.querySelector('.put').value;
+                document.querySelector('.display').innerHTML = `Your name is: ${a}`;
+            }
+        </script>
+    </body>
+</html>

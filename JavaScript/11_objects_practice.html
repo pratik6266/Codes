@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title></title>-->
+        
+    </head>
+    <body>
+        <button onclick=" 
+            playgame('heads');
+        ">heads</button>
+
+        <button onclick=" 
+            playgame('tails');
+        ">tails</button>
+
+        <script>
+            let score = 
+            {
+                win: 0,
+                lose: 0
+            };
+
+            function playgame(y)
+            {
+                
+                let x = '';
+                let n = Math.floor((Math.random() * 2) + 1);
+                function guess()
+                {
+                    let x = ' ';
+                    if(n === 1)
+                        x = 'heads';
+
+                    else if(n === 2)
+                        x = 'tails';
+
+                    return x;
+                }
+                let rex = guess();
+                if(rex === y)
+                {
+                    score.win++;
+                    alert(`Computer choose ${rex} YOU WON\nWIN: ${
+                    score.win}, LOSE: ${score.lose}`);
+                }
+
+                else
+                {
+                    score.lose++;
+                    alert(`Computer choose ${rex} YOU LOSE\nWIN: ${
+                    score.win}, LOSE: ${score.lose}`);
+                }
+            }
+        </script>
+    </body>
+</html>

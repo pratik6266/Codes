@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Cart Quantity</title>
-        
-    </head>
-    <body>
-        <p>Cart Quantity</p>
-        <button onclick = "console.log(`Cart Quantity: ${quantity}`);">Show Quantity</button>
-        <button onclick = "quantity++;
-        console.log(`Cart Quantity: ${quantity}`);
-        ">Add to cart</button>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
 
-        <button  onclick = "quantity += 2;
-        console.log(`Cart Quantity: ${quantity}`);
-        ">+2</button>
+    <button onclick="disp();">Show Quantity</button>
 
-        <button  onclick = "quantity = quantity + 3;
-        console.log(`Cart Quantity: ${quantity}`);
-        ">+3</button>
+    <button
+      onclick="quantity++;
+        disp();
+        "
+    >
+      Add to cart
+    </button>
 
-        <button  onclick = "quantity = quantity + 4;
-        console.log(`Cart Quantity: ${quantity}`);
-        ">+4</button>
-        
-        <button  onclick = "quantity = quantity + 5;
-        console.log(`Cart Quantity: ${quantity}`);
-        ">+5</button>
+    <button
+      onclick="quantity += 2;
+        disp();
+        "
+    >
+      +2
+    </button>
 
-        <button  onclick = "quantity--;
-        console.log(`Cart Quantity: ${quantity}`);
-        ">Remove from cart</button>
+    <button
+      onclick="quantity = quantity + 3;
+        disp();
+        "
+    >
+      +3
+    </button>
 
-        <button  onclick = "quantity -= 2;
-        console.log(`Cart Quantity: ${quantity}`);
-        ">-2</button>
+    <button
+      onclick="quantity = quantity + 4;
+disp();        "
+    >
+      +4
+    </button>
 
-        <button  onclick = "quantity -= 3;
-        console.log(`Cart Quantity: ${quantity}`);
-        ">-3</button>
+    <button
+      onclick="quantity = quantity + 5;
+disp();        "
+    >
+      +5
+    </button>
 
-        <button  onclick = "quantity = 0;
+    <button
+      onclick="quantity--;
+disp();        "
+    >
+      Remove from cart
+    </button>
+
+    <button
+      onclick="quantity -= 2;
+disp();        "
+    >
+      -2
+    </button>
+
+    <button
+      onclick="quantity -= 3;
+disp();        "
+    >
+      -3
+    </button>
+
+    <button
+      onclick="quantity = 0;
         console.log('Cart was reset.');
-        console.log(`Cart Quantity: ${quantity}`);
-        ">Reset Cart</button>
+disp();        "
+    >
+      Reset Cart
+    </button>
 
-        <script>
-            let quantity = 0;
-        </script>
-    </body>
+    <p class="display"></p>
+
+    <script>
+      let quantity = 0;
+      function disp() {
+        document.querySelector(
+          ".display"
+        ).innerHTML = `Cart quantity: ${quantity}`;
+      }
+    </script>
+  </body>
 </html>

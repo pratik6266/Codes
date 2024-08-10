@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title></title>-->
+        
+    </head>
+    <body>
+        <script>
+           /* const p = {
+                name: 'Pratik',
+                surname: 'Raj',
+                ['Full-name']: 'Pratik Raj',
+                rating: {
+                    stars: 4.5,
+                    count: 45
+                },
+                fun: function dec(){
+                    console.log('Function in object');
+                }
+            };
+            console.log(p);
+            console.log(p.name);
+            console.log(p['Full-name']);
+            p.fun();
+            console.log(typeof(console));
+            console.log(typeof(console.log));
+            const strin = JSON.stringify(p);
+            console.log(JSON.parse(strin));
+            */
+            console.log('hello'.length);
+            console.log('hello'.toUpperCase());
+
+            const obj1 = {
+                message: 'hello'
+            };
+
+            const obj2 = obj1;
+            obj1.message = "good job";
+            console.log(obj2);
+            console.log(obj1);
+
+            const obj3 = {
+                message: 'good job'
+            };
+
+            console.log(obj1 === obj3);
+            console.log(obj1 === obj2);
+
+            const obj4 = {
+                message : 'good job',
+                price : 109
+            };
+
+            //const message = obj4.message;
+            const {message,price} = obj4;
+            console.log(message);
+            console.log(price);
+
+            const obj5 = {
+                //message: message
+                message,
+                method()
+                {
+                    console.log('method');
+                }
+            };
+
+            console.log(obj5);
+            obj5.method;
+        </script>
+    </body>
+</html>

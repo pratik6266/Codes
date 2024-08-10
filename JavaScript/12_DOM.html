@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title></title>-->
+        
+    </head>
+    <body>
+        <p>Amazon Shippig Calculator</p>
+        <p>Orders under $ 40 = +$10 shipping.</p>
+        <p>Orders over $ 40 = FREE shipping.</p>
+        <input placeholder="Cost of order" class="input" onkeydown="
+            if(event.key === 'Enter'){caltotal();}
+        ">
+
+        <button onclick = "
+        caltotal();
+        ">calculate</button>
+
+        <p class="d"> </p>
+
+        <script>
+            function caltotal(){
+                let b = Number(document.querySelector('.input').value);
+                if(b < 40)
+                    document.querySelector('.d').innerHTML = '$ '+(Math.round((b)*100 + 1000)/100);
+                else
+                    document.querySelector('.d').innerHTML = '$ '+b;
+            }
+        </script>
+    </body>
+</html>

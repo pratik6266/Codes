@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart Quantity</title>
+        
+    </head>
+    <body>
+        <p>Cart Quantity</p>
+        <button onclick = "console.log(`Cart Quantity: ${quantity}`);">Show Quantity</button>
+
+        <button onclick = "add(1);">Add to cart</button>
+
+        <button  onclick = "add(2);">+2</button>
+
+        <button  onclick = "add(3);">+3</button>
+
+        <button  onclick = "add(4);">+4</button>
+        
+        <button  onclick = "add(5);">+5</button>
+
+        <button  onclick = "sub(1);">Remove from cart</button>
+
+        <button  onclick = "sub(2);">-2</button>
+
+        <button  onclick = "sub(3);">-3</button>
+
+        <button  onclick = "quantity = 0;
+        console.log('Cart was reset.');
+        console.log(`Cart Quantity: ${quantity}`);
+        ">Reset Cart</button>
+
+        <script>
+            let quantity = 0;
+            function add(a)
+            {
+                if(quantity >= 10)
+                    alert('The cart is full');
+
+                else
+                {
+                    if((quantity+a) > 10)
+                        quantity = 10;
+
+                    else
+                        quantity += a;
+
+                    console.log(quantity)
+                }
+            }
+
+            function sub(a)
+            {
+                if(quantity <= 0)
+                    alert('The cart is empty');
+
+                else
+                {
+                    if((quantity - a) < 0)
+                        quantity = 0;
+
+                    else
+                        quantity -= a;
+
+                    console.log(quantity)
+                }
+            }
+
+        </script>
+    </body>
+</html>
