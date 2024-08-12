@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title></title>-->
+        <style>
+            .a
+            {
+                font-size: 18px;
+                font-family: Arial;
+            }
+            .b
+            {
+                color: white;
+                background-color:black;
+                border: 1px solid black;
+                font-size: 14px;
+                padding: 10px 18px;
+                font-weight: bold;
+                border-radius: 20px;
+                cursor: pointer;
+                margin-bottom: 35px;
+            }
+            .c
+            {
+                font-family: Arial;
+                font-size: 17.5px;
+            }
+            .is
+            {
+                background-color: rgb(241, 241, 241);
+                color: black;
+                border: none;
+            }
+            .d
+            {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 10px;
+                font-size: 15px;
+            }
+            .e
+            {
+                border: none;
+                background-color: green;
+                color: white;
+                padding-top: 13px;
+                padding-bottom: 13px;
+                font-size: 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="a">YouTube Subscribe Button</p>
+        <button class="b" onclick="fun()">Subscribe</button>
+        <p class="c">Amazon Shipping Calculator</p>
+        <p class="c">Orders under $40 = + $10 shipping.</p>
+        <p class="c">Orders over $40 = FREE shipping.</p>
+        <input class="d" placeholder="Cost of order" onkeydown="
+        if(event.key === 'Enter'){fuc();}
+        ">
+        <button class="e" onclick="fuc()">Calculate</button>
+        <p class="f"> </p>
+        <script>
+            function fun()
+            {
+                if(document.querySelector('.b').innerHTML === 'Subscribe')
+                {
+                    document.querySelector('.b').innerHTML = 'Subscribed';
+                    document.querySelector('.b').classList.add('is');
+                }
+
+                else
+                {
+                    document.querySelector('.b').innerHTML = 'Subscribe';
+                    document.querySelector('.b').classList.remove('is');
+                }
+            }
+
+            function fuc()
+            {
+                let a = Number(document.querySelector('.d').value);
+                if(a < 40)
+                {
+                    document.querySelector('.f').innerHTML = '$ '+(Math.round((a*100)+1000)/100);
+                }
+                else
+                    document.querySelector('.f').innerHTML = '$ '+a;
+            }
+        </script>
+    </body>
+</html>

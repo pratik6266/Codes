@@ -21,7 +21,11 @@
         <script>
             function caltotal(){
                 let b = Number(document.querySelector('.input').value);
-                if(b < 40)
+                
+                if(b < 0)
+                    document.querySelector('.d').innerHTML = `Error: cost cannot be less than $0`;
+
+                else if(b < 40)
                     document.querySelector('.d').innerHTML = '$ '+(Math.round((b)*100 + 1000)/100);
                 else
                     document.querySelector('.d').innerHTML = '$ '+b;

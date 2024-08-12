@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <title></title> -->
+        
+    </head>
+    <body>
+        <script>
+            const arr = [3];
+            
+            console.log(arr);
+            function add(arr) 
+            {
+                let min = arr[0];
+                let max = arr[0];
+                for(let i = 0;i<arr.length;i++)
+                {
+                    if(arr[i]>max)
+                        max = arr[i];
+
+                    if(arr[i]<min)
+                        min = arr[i];
+                }
+                if(arr.length === 0)
+                {
+                    min = null;
+                    max = null;
+                }
+                const int = {
+                    min: min,
+                    max: max
+                };
+                return int;
+            }
+            const arr1 = add(arr);
+            console.log(arr1.max);
+            console.log(arr1.min);
+        </script>
+    </body>
+</html>

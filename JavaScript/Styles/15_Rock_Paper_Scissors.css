@@ -1,0 +1,40 @@
+body{
+    color:white;
+    background-color:black;
+    font-family: Arial;
+  }
+  .a{
+    font-size: 30px;
+    font-weight:bold;
+  }
+  .but
+  {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: solid;
+    border-width: 3px;
+    border-color: white;
+    background-color: black;
+    margin-right: 10px;
+  }
+  .image
+  {
+    width: 50px;
+    background-color: black;
+  }
+  .result
+  {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  .score
+  {
+    margin-top: 40px;
+  }
+  .reset
+  {
+    padding: 8px 15px;
+    font-size: 18px;
+  }

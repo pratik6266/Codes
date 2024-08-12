@@ -1,0 +1,42 @@
+body{
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    font-family: Arial;
+}
+.digit
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: rgb(64, 64, 64);
+    font-weight: 700;
+}
+.ops
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: rgb(255, 149, 0);
+    font-weight: 700;
+}
+.display
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+.clear
+{
+    font-size: 8px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: rgb(64, 64, 64);
+    font-weight: 700;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title></title>-->
+        
+    </head>
+    <body>
+        <p>Todo List Pratice 1</p>
+        <input class="in" type="text" placeholder="Todo name">
+        <button class="a" onclick="fun1();">add</button>
+
+        <p>Todo List Pratice 2</p>
+        <input class="in1" type="text" placeholder="Todo name">
+        <button class="a1" onclick="fun();">add</button>
+        <div class="display"> </div>
+
+        <script>
+            let arr = [];
+            function fun1()
+            {
+                let a = document.querySelector('.in').value;
+                arr[0] = a;
+                console.log(arr);
+                document.querySelector('.in').value = '';
+            }
+            
+            let ar = [];
+            function render()
+            {
+                let list = '';
+                for(let i = 0;i < ar.length;i++)
+                {
+                    const a = ar[i];
+                    const html = `<p style="margin:4px">${a}</p>`;
+                    list += html;
+                }
+                document.querySelector('.display').innerHTML = list;
+            }
+
+            function fun()
+            {
+                let a = document.querySelector('.in1').value;
+                ar.push(a);
+                document.querySelector('.in1').value = '';
+                render();
+            }
+            
+            
+        </script>
+    </body>
+</html>
