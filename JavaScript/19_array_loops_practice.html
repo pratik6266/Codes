@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- <title></title> -->
+        <!--<title></title>-->
         
     </head>
     <body>
         <script>
-            const arr = [3];
-            
-            console.log(arr);
-            function add(arr) 
+            let arr = ['egg','apple','egg','egg','ham','egg'];
+            function find(arr,value)
             {
-                let min = arr[0];
-                let max = arr[0];
-                for(let i = 0;i<arr.length;i++)
+                for(let i = 0;i < arr.length;i++)
                 {
-                    if(arr[i]>max)
-                        max = arr[i];
+                    if(arr[i] === value)
+                        return 1;
 
-                    if(arr[i]<min)
-                        min = arr[i];
+                    else 
+                       return 0;
                 }
-                if(arr.length === 0)
-                {
-                    min = null;
-                    max = null;
-                }
-                const int = {
-                    min: min,
-                    max: max
-                };
-                return int;
             }
-            const arr1 = add(arr);
-            console.log(arr1.max);
-            console.log(arr1.min);
+
+            function s(ar)
+            {
+                let ar1 = [];
+                for(let i = 0;i < ar.length;i++)
+                {
+                    if(find(ar1,ar[i]) === 1)
+                        continue;
+
+                    else{
+                        ar1.push(ar[i]);
+                    }
+                }
+               return ar1;
+            }
+            
+            let s1 = s(arr);
+            console.log(s1);
         </script>
     </body>
 </html>

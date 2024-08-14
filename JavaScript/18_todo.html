@@ -2,7 +2,32 @@
 <html>
     <head>
         <!--<title></title>-->
-        
+        <style>
+            .a2
+            {
+                color: white;
+                background-color: green;
+                padding: 4px;
+                border: none;
+            }
+            body
+            {
+                font-family: Arial;
+            }
+            .display1, .ab
+            {
+                display: grid;
+                grid-template-columns: 250px 150px 100px;
+                column-gap: 10px;
+                row-gap: 10px;
+                align-items: center;
+            }
+            .ab
+            {
+                margin-bottom: 10px;
+                align-items: stretch;
+            }
+        </style>
     </head>
     <body>
         <p>Todo List Pratice 1</p>
@@ -13,6 +38,15 @@
         <input class="in1" type="text" placeholder="Todo name">
         <button class="a1" onclick="fun();">add</button>
         <div class="display"> </div>
+
+        <p>Todo List Pratice 3</p>
+        <div class="ab">
+            <input class="in2" type="text" placeholder="Todo name">
+            <input class="date" type="date">
+            <button class="a2" onclick="f();">add</button>
+        </div>
+        <div class="display1"></div>
+
 
         <script>
             let arr = [];
@@ -44,7 +78,44 @@
                 document.querySelector('.in1').value = '';
                 render();
             }
-            
+
+            let ar1 = [];
+            function render1()
+            {
+                let list = '';
+                for(let i = 0;i < ar1.length;i++)
+                {
+                    const a = ar1[i];
+                    const name = a.name;
+                    const date = a.duedate;
+                    const html = `
+                    <div>${name}</div>
+                    <div>${date}</div>
+                        <button
+                        style = "padding: 10px;color:white;background-color: red;border:none"
+                        onclick="
+                            ar1.splice(${i}, 1);
+                            render1();
+                        ">Delete
+                        </button>
+                    `;
+                    list += html;
+                }
+                console.log(list);
+                document.querySelector('.display1').innerHTML = list;
+            }
+
+            function f()
+            {
+                let a = document.querySelector('.in2').value;
+                let b = document.querySelector('.date').value;
+                ar1.push({
+                    name: a,
+                    duedate: b
+                });
+                document.querySelector('.in2').value = '';
+                render1();
+            }
             
         </script>
     </body>
