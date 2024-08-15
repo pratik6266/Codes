@@ -43,7 +43,7 @@
         <div class="ab">
             <input class="in2" type="text" placeholder="Todo name">
             <input class="date" type="date">
-            <button class="a2" onclick="f();">add</button>
+            <button class="a2">add</button>
         </div>
         <div class="display1"></div>
 
@@ -62,12 +62,13 @@
             function render()
             {
                 let list = '';
-                for(let i = 0;i < ar.length;i++)
+               
+                ar.forEach(function(value)
                 {
-                    const a = ar[i];
+                    const a = value;
                     const html = `<p style="margin:4px">${a}</p>`;
                     list += html;
-                }
+                })
                 document.querySelector('.display').innerHTML = list;
             }
 
@@ -116,6 +117,12 @@
                 document.querySelector('.in2').value = '';
                 render1();
             }
+
+
+        document.querySelector('.a2').addEventListener('click',() =>
+        {
+            f();
+        });
             
         </script>
     </body>

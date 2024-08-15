@@ -7,7 +7,7 @@ body{
     font-size: 30px;
     font-weight:bold;
   }
-  .but
+  .but, .butt, .buttt
   {
     width: 120px;
     height: 120px;
@@ -33,7 +33,7 @@ body{
   {
     margin-top: 40px;
   }
-  .reset
+  .reset, .auto
   {
     padding: 8px 15px;
     font-size: 18px;

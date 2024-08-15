@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title></title>-->
+        
+    </head>
+    <body>
+        <script>
+            let arr = ['egg','apple','egg','egg','ham']
+            function trim(arr)
+            {
+                for(let i = 0;i< arr.length;i++)
+                {
+                    let count = 0;
+                    if((arr[i] === 'egg') && count < 2)
+                    {
+                        arr.splice(i,1)
+                        count++;
+                    }
+                }
+                console.log(arr);
+            }
+            trim(arr)
+        </script>
+    </body>
+</html>
