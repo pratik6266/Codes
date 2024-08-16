@@ -2,6 +2,15 @@ import {cart, addtocart} from  '../data/cart.js'
 import {products} from '../data/products.js'
 import {formatMoney} from './utils/money.js'
 
+window.onload = function () {
+    let cartQuantity = 0;
+    cart.forEach((item) => {
+        cartQuantity += Number(item.quantity);
+    })
+    document.querySelector('.cart-quantity').innerHTML = cartQuantity;
+}
+
+
 let producthtml = '';
 products.forEach((product) => {
     producthtml  +=  ` 

@@ -2,6 +2,14 @@ import {cart, removeFromCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 import {formatMoney} from './utils/money.js';
 
+window.onload = function () {
+    let cartQuantity = 0;
+    cart.forEach((item) => {
+        cartQuantity += Number(item.quantity);
+    })
+    document.querySelector('.js-top').innerHTML = `${cartQuantity} items`;
+}
+
 let checkouthtml = '';
 cart.forEach((item) =>
 {
@@ -105,12 +113,17 @@ document.querySelectorAll('.delete-quantity-link').forEach((link) =>
     })
 })
 
-
-function updateCheckoutTop ()
+export function cal()
 {
     let cartQuantity = 0;
     cart.forEach((item) => {
         cartQuantity += Number(item.quantity);
     })
-    document.querySelector('.js-top').innerHTML = `${cartQuantity} items`;
+    return cartQuantity;
+}
+
+function updateCheckoutTop ()
+{
+    let a = cal();
+    document.querySelector('.js-top').innerHTML = `${a} items`;
 }
