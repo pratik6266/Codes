@@ -74,7 +74,6 @@ function updateCartQuantity (productId)
         cartQuantity += Number(item.quantity);
     })
     document.querySelector('.cart-quantity').innerHTML = cartQuantity;
-    //document.querySelector('.checkout-header-middle-section').innerHTML = cartQuantity;
 }
 
 document.querySelectorAll('.js-addtocart').forEach((button) => {

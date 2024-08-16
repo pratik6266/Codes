@@ -101,5 +101,16 @@ document.querySelectorAll('.delete-quantity-link').forEach((link) =>
         removeFromCart(productId);
         const toDelete = document.querySelector(`.jsToDelete-${productId}`);
         toDelete.remove();
+        updateCheckoutTop();
     })
 })
+
+
+function updateCheckoutTop ()
+{
+    let cartQuantity = 0;
+    cart.forEach((item) => {
+        cartQuantity += Number(item.quantity);
+    })
+    document.querySelector('.js-top').innerHTML = `${cartQuantity} items`;
+}
