@@ -1,3 +1,7 @@
+import {cart, addtocart} from  '../data/cart.js'
+import {products} from '../data/products.js'
+import {formatMoney} from './utils/money.js'
+
 let producthtml = '';
 products.forEach((product) => {
     producthtml  +=  ` 
@@ -20,7 +24,7 @@ products.forEach((product) => {
         </div>
 
         <div class="product-price">
-            ${'$'+(product.priceCents/100).toFixed(2)}
+            ${'$'+formatMoney(product.priceCents)}
         </div>
 
         <div class="product-quantity-container">
@@ -55,49 +59,32 @@ products.forEach((product) => {
 
 document.querySelector('.js-products-grid').innerHTML = producthtml;
 
+function updateCartQuantity (productId)
+{
+    let a = document.querySelector(`.added-to-cart-${productId}`)
+    a.style.opacity = 1;
+
+    setTimeout(() =>{
+        document.querySelector(`.added-to-cart-${productId}`).style.opacity = 0;
+    },2000);
+
+    
+    let cartQuantity = 0;
+    cart.forEach((item) => {
+        cartQuantity += Number(item.quantity);
+    })
+    document.querySelector('.cart-quantity').innerHTML = cartQuantity;
+    //document.querySelector('.checkout-header-middle-section').innerHTML = cartQuantity;
+}
+
 document.querySelectorAll('.js-addtocart').forEach((button) => {
     button.addEventListener('click',() =>
         {
         const productId = button.dataset.productId;
 
-        let a = document.querySelector(`.added-to-cart-${productId}`)
-        //a.style.opacity = 1;
-        a.classList.add('added');
-
-        setTimeout(() =>{
-            //document.querySelector(`.added-to-cart-${productId}`).style.opacity = 0;
-            a.classList.remove(`added`);
-            console.log(a);
-        },2000);
-        
-        console.log(productId)
-        let matching;
-
-        const quan = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
-
-        console.log(quan);
-
-        cart.forEach((item) =>{
-            if(productId === item.productId)
-                matching = item;
-        });
-
-        if(matching)
-            matching.quantity = quan;
-        else
-        {
-            cart.push({
-                productId: productId,
-                quantity: quan
-            });
-        }
-
-        let cartQuantity = 0;
-        cart.forEach((item) => {
-            cartQuantity += Number(item.quantity);
-        })
-        document.querySelector('.cart-quantity').innerHTML = cartQuantity;
-        console.log(cartQuantity);
-        console.log(cart);
+        addtocart(productId,cart);
+        updateCartQuantity(productId);
+        //console.log(cartQuantity);
+        //console.log(cart);
     });
 });
