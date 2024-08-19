@@ -94,7 +94,7 @@ export function render ()
     
             const priceString = value.Cents === 0
                 ? 'FREE'
-                : `${formatMoney(value.Cents)} -`
+                : `$${formatMoney(value.Cents)} -`
     
             const ischecked = value.id === item.deliveryOptionId;
     
