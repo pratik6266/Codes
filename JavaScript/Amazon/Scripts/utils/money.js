@@ -1,4 +1,4 @@
 export function formatMoney (amount)
 {
-    return ((amount/100).toFixed(2));
+    return ((Math.round(amount))/100).toFixed(2);
 }
