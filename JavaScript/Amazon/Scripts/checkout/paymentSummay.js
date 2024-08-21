@@ -26,7 +26,6 @@ export function paymentRender ()
             if(option.id === deliveryOptionId)
             {
                 match = option;
-                console.log(match);
             }
 
         })
