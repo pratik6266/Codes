@@ -1,3 +1,49 @@
+import { formatMoney } from "../Scripts/utils/money.js";
+
+class Products{
+  id;
+  image;
+  name;
+  rating;
+  priceCents;
+
+  constructor(Prod)
+  {
+    this.id = Prod.id;
+    this.image = Prod.image;
+    this.name = Prod.name;
+    this.rating = Prod.rating;
+    this.priceCents = Prod.priceCents;
+  }
+
+  getstar() {
+    return `images/ratings/rating-${this.rating.stars * 10}.png`;
+  }
+
+  getprice(){
+    return `${'$'+formatMoney(this.priceCents)}`;
+  }
+}
+
+const prod = new Products(
+  {
+    id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    image: "images/products/athletic-cotton-socks-6-pairs.jpg",
+    name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+    rating: {
+      stars: 4.5,
+      count: 87
+    },
+    priceCents: 1090,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  }
+);
+console.log(prod);
+
 export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -657,4 +703,8 @@ export const products = [
       "mens"
     ]
   }
-];
+].map((prod) => {
+  return new Products(prod);
+});
+
+console.log(products);

@@ -56,7 +56,7 @@ export function render ()
                 ${matching.name}
             </div>
             <div class="product-price">
-                ${'$'+formatMoney(matching.priceCents)}
+                ${matching.getprice()}
             </div>
             <div class="product-quantity">
                 <span>
