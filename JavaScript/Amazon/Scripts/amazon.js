@@ -92,7 +92,5 @@ document.querySelectorAll('.js-addtocart').forEach((button) => {
 
         addtocart(productId,cart);
         updateCartQuantity(productId);
-        //console.log(cartQuantity);
-        //console.log(cart);
     });
 });
