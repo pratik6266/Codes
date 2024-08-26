@@ -7,14 +7,7 @@ import { paymentRender } from './paymentSummay.js';
 
 export function render ()
 {
-    window.onload = function () {
-        let cartQuantity = 0;
-        cart.forEach((item) => {
-            cartQuantity += Number(item.quantity);
-        })
-        document.querySelector('.js-top').innerHTML = `${cartQuantity} items`;
-    }
-    
+    updateCheckoutTop();
     let checkouthtml = '';
     cart.forEach((item) =>
     {

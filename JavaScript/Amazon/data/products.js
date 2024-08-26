@@ -70,6 +70,24 @@ const tshirt = new clothing(
 
 export let products = [];
 
+export function loadProductsFetch(){
+  const promise = fetch('https://supersimplebackend.dev/products').then((response) => {
+    return response.json();
+  }).then((productsdata) => {
+    products = productsdata.map((prod) => {
+      if(prod.type === 'clothing'){
+        return new clothing(prod);
+      }
+      return new Products(prod);
+    });
+  })
+  return promise;
+}
+
+// loadProductsFetch().then(() => {
+//   fun();
+// })
+
 export function loadProducts(fun){
   const xhr = new XMLHttpRequest();
 
