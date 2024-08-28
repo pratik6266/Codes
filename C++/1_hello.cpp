@@ -1,37 +1,43 @@
 #include <iostream>
 using namespace std;
 
-class employee
+class complex
 {
-    private:   // can't be acces outside so use method
-        int a, b, c;
+    int real;
+    int img;
 
-    public:  // can be accessed any where 
-        int d, e;
+    public: 
 
-    void setdata(int a, int b, int c);
-    void getdata(){
-        cout<<a<<endl;
-        cout<<b<<endl;
-        cout<<c<<endl;
-        cout<<d<<endl;
-        cout<<e<<endl;
-    }
+        friend void sum(complex a, complex b); // private or public don't matter
+
+        void set()
+        {
+            cout<<"Enter real part: ";
+            cin>>real;
+            cout<<"Enter imaginary part: ";
+            cin>>img;
+        }
+
+        void display()
+        {
+            cout<<real<<" + "<<img<<"i"<<endl;
+        }       
 };
 
-void employee::setdata(int a1, int b1, int c1)
+void sum(complex a, complex b)
 {
-    a = a1;
-    b = b1;
-    c = c1;
+    int x = a.real + b.real;
+    int y = a.img + b.img;
+    cout<<x<<" + "<<y<<"i"<<endl;
 }
 
 int main()
 {
-    employee harry;
-    harry.setdata(1,2,3);
-    harry.d = 4;
-    harry.e = 5;
-    harry.getdata();
+    complex a ,b ,c;
+    a.set();
+    a.display();
+    b.set();
+    b.display();
+    sum(a,b);
     return 0;
 }
