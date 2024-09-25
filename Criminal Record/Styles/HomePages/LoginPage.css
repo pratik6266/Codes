@@ -48,6 +48,52 @@ body
     margin-right: 15px;
 }
 
+.middle
+{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 0;
+    align-items: center;
+    margin-top: 8px;
+    max-width: 700px;
+}
+
+.middle-search
+{
+    height: 35px;
+    color: white;
+    background-color: #4CAF50;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    padding: 0;
+    cursor: pointer;
+    width: 70px;
+}
+
+.middle-input
+{
+    height: 35px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-style: solid;
+    border-color: #4CAF50;
+}
+
+
+.middle-input::placeholder
+{
+    font-weight: bold;
+    color: black;
+
+}
+
 .right
 {
     display: flex;
@@ -142,64 +188,18 @@ button {
     font-size: 16px;
 }
 
-.wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Extra for button and input correcton */
-
-.middle
-{
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-    margin-top: 8px;
-    max-width: 700px;
-}
-
-.middle-search
-{
-    height: 35px;
-    color: white;
-    background-color: #4CAF50;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 20px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -10px;
-    margin-bottom: 30px;
-    padding: 0;
-    cursor: pointer;
-    width: 70px;
-}
-
-.middle-input
-{
-    height: 35px;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: #4CAF50;
-}
-
-
-.middle-input::placeholder
-{
-    font-weight: bold;
-    color: black;
-
-}
 .options
 {
     width: 500px;
     height: 40px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Footer */
@@ -210,7 +210,6 @@ button {
     height: 180px;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
-    /* position: absolute; */
     bottom: 0;
     left: 0;
     right: 0;

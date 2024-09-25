@@ -3,21 +3,20 @@
 
 <head>
     <title>Criminal Record Management</title>
-    <link rel="stylesheet" href="../Styles/home_page.css">
+    <link rel="stylesheet" href="../../Styles/HomePages/LoginPage.css">
 </head>
 
 <body>
     <div class="header">
 
         <div class="left">
-            <img class="header-logo-1" src="../images/main_logo.png">
-            <img class="header-logo-2" src="../images/ncrc_logo.png">
-            <!-- <img class="header-logo-3" src="images/gandhi-logo.png"> -->
-            <img class="header-logo-4" src="../images/G20Logo.png">
+            <img class="header-logo-1" src="../../images/main_logo.png">
+            <img class="header-logo-2" src="../../images/ncrc_logo.png">
+            <img class="header-logo-4" src="../../images/G20Logo.png">
         </div>
 
         <div class="middle">
-            <input class="middle-input" type="text" placeholder="Search For">
+            <input id="text" name="text" class="middle-input" type="text" placeholder="Search For">
             <button class="middle-search">Search</button>
         </div>
 
@@ -34,13 +33,13 @@
     <div class="main">
         <h1>Criminal Record</h1>
         <h3>Enter your login credentials</h3>
-        <form action="">
-              <label for="first">
+        <div id="loginForm">
+              <label for="userId">
                     User-Id:
               </label>
               <input type="text" 
-                     id="first" 
-                     name="first" 
+                     id="userId" 
+                     name="userId" 
                      placeholder="Enter your User-Id" required>
 
               <label for="password">
@@ -55,29 +54,26 @@
               <label for="role">
                     Role:
               </label>
-              <!-- <input type="text"
-                    id="role" 
-                    name="role"
-                    placeholder="Enter your Role" required> -->
-                    <div class="role-selector">
-                        <select class="options">
-                        <option selected value="">Select</option>
+                    <!-- <div class="role-selector"> -->
+                        <select id="role" name="role" class="options">
+                        <option selected value="">Select Role</option>
+                        <option value="Admin">Administrator</option>
                         <option value="Jailer">Jailer</option>
                         <option value="Police">Police</option>
-                        <option value="SBI">CBI</option>
+                        <option value="CBI">CBI</option>
                         <option value="Judges">Judges</option>
                         </select>
-                    </div>
+                    <!-- </div> -->
 
               <div class="wrap">
-                    <button type="submit"
-                            onclick="solve()">
+                    <button
+                         onclick="solve()">
                           Submit
                     </button>
               </div>
-        </form>
+            </div>
         <p>Not registered?
-              <a href="#"
+              <a href="SignupPage.html"
                  style="text-decoration: none;">
                     Create an account
               </a>
@@ -109,15 +105,14 @@
 
     <div class="footer-fourth">
         <strong class="a">Useful Links</strong>
-        <a class="b" href="https://negd.gov.in/" target="_blank"><img src="../images/footer1.svg" alt=""></a>
-        <a class="b" href="https://www.digitalindia.gov.in/" target="_blank"><img src="../images/footer2.svg" alt=""></a>
-        <a class="b" href="https://www.mygov.in/" target="_blank"><img src="../images/footer3.svg" alt=""></a>
-        <a class="b" href="https://www.india.gov.in/" target="_blank"><img src="../images/footer4.svg" alt=""></a>
+        <a class="b" href="https://negd.gov.in/" target="_blank"><img src="../../images/footer1.svg" alt=""></a>
+        <a class="b" href="https://www.digitalindia.gov.in/" target="_blank"><img src="../../images/footer2.svg" alt=""></a>
+        <a class="b" href="https://www.mygov.in/" target="_blank"><img src="../../images/footer3.svg" alt=""></a>
+        <a class="b" href="https://www.india.gov.in/" target="_blank"><img src="../../images/footer4.svg" alt=""></a>
     </div>
-
   </div>
 
-
+  <script src="../../Script/HomePages/LoginPage.js"></script>
 </body>
 
 </html>
